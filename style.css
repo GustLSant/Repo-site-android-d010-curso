@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'idroid';
+    src: url('fonte/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --cor-grad-01: rgb(33, 159, 100);
+    --cor-grad-02: rgb(0, 66, 35);
+    --cor-destaque: rgb(79, 175, 130);
+    --cor-background-main: rgb(221 207 148);
+    --cor-escura: rgb(0, 50, 0);
+    --cor-clara: rgba(48, 199, 98, 1);
+    
+    --font-padrao: sans-serif;
+    --font-destaque: idroid, monospace;
+}
+
+
+*{
+    font-family: var(--font-padrao);
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+
+/* CLASSES GERAIS =========================================================================================== */
+
+.center{
+    text-align: center;
+}
+
+.justify{
+    text-align: justify;
+}
+
+
+/* ESTILOS DO HEADER ======================================================================================== */
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor-grad-01), var(--cor-grad-02));
+    min-height: 175px;
+    padding-top: 20px;
+    color: white;
+}
+
+header > h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.568);
+}
+
+header > p{
+    max-width: 435px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header > nav{
+    margin-top: 36px;
+    margin-left: 20px;
+}
+
+nav > a{
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+nav > a:hover{
+    background-color: var(--cor-destaque);
+    transition-duration: 0.3s;
+}
+
+
+/* ESTILOS DO MAIN  ======================================================================================= */
+
+main{
+    height: fit-content;
+    background-color: var(--cor-background-main);
+    padding-bottom: 30px;
+}
+
+main > div{
+    min-width: none;
+    max-width: 800px;
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+}
+
+h2, h3{
+    font-family: var(--font-destaque);
+    color: var(--cor-escura);
+}
+
+main p{ /*para um P q esteja dentro de um MAIN em qualquer nivel*/
+    text-indent: 20px;
+    margin: 15px 0px;
+    line-height: 1.5em;
+}
+
+main a{
+    color: var(--cor-escura);
+    text-decoration: none;
+    background-color: var(--cor-clara);
+    padding: 2px 2px 2px 5px;
+}
+
+main a::after{
+    content: " 🔗";
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.h3-main{
+    background-image: linear-gradient(to right, var(--cor-clara), rgba(0, 0, 0, 0));
+    padding: 5px 5px;
+    margin-top: 30px;
+}
+
+img{
+    width: 100%;
+}
+
+#div-iframe-ytb{
+    background-color: var(--cor-grad-02);
+    padding: 10px;
+    margin: 0px -20px 10px -20px;
+    height: 315px; /*315 (res padrao do iframe) para o video ficar centralizado verticalmente*/
+}
+
+#div-iframe-ytb > iframe{
+    display: block;
+    width: 75%;
+    margin: auto;
+}
+
+#imagem-budgroid{
+    display: block; /*tem q fazer isso para centralizar as imagens pq as imagens por padrao nao sao um bloco*/
+    max-width: 300px;
+    margin: auto;
+}
+
+#caixa-saber-mais{
+    background-color: rgb(155 251 219);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 2px;
+}
+
+#caixa-saber-mais > h4{
+    color: white;
+    background-color: rgb(48 131 102);
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0px; /*margem negativa cresce a parada*/
+}
+
+#caixa-saber-mais > p{
+    padding: 5px 18px;
+}
+
+#caixa-saber-mais > ul{
+    list-style-position: inside;
+    padding: 5px 30px;
+    columns: 2;
+}
+
+
+/* ESTILOS DO MAIN  ======================================================================================= */
+
+footer{
+    background-color: var(--cor-grad-02);
+    padding: 5px;
+}
+
+footer > p{
+    color: white;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
